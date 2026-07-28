@@ -1,4 +1,5 @@
 :root {
+  --radius: 0.65rem;
   --background: oklch(0.976 0.000 0.0);
   --foreground: oklch(0.305 0.008 223.7 / 0.7);
   --card: oklch(0.946 0.001 286.4);
@@ -33,7 +34,12 @@
   --sidebar-ring: oklch(0.611 0.065 253.4);
   --breathe-color: oklch(0.611 0.065 253.4);
   --color-scheme: light;
-  --radius: 0.65rem;
+  --heading-h1: oklch(0.611 0.065 253.4);
+  --heading-h2: oklch(0.658 0.065 198.3);
+  --heading-h3: oklch(0.652 0.132 81.6);
+  --heading-h4: oklch(0.604 0.194 285.5);
+  --heading-h5: oklch(0.615 0.144 22.2);
+  --heading-h6: oklch(0.593 0.031 248.3);
 }
 
 .dark {
@@ -77,6 +83,12 @@
 #writer {
   --highlight-color: oklch(0.85 0.15 85 / 0.35);
   --default-selection: oklch(0.6 0.25 255 / 0.3);
+  --heading-h1: oklch(0.611 0.065 253.4);
+  --heading-h2: oklch(0.658 0.065 198.3);
+  --heading-h3: oklch(0.652 0.132 81.6);
+  --heading-h4: oklch(0.604 0.194 285.5);
+  --heading-h5: oklch(0.615 0.144 22.2);
+  --heading-h6: oklch(0.593 0.031 248.3);
   --code-editor-theme-light: githubLight;
   --code-editor-theme-dark: githubDark;
   --source-code-theme-light: githubLight;
@@ -85,6 +97,30 @@
 
 .dark #writer {
   --default-selection: oklch(0.65 0.18 260 / 0.45);
+}
+
+#writer h1 {
+  color: var(--heading-h1);
+}
+
+#writer h2 {
+  color: var(--heading-h2);
+}
+
+#writer h3 {
+  color: var(--heading-h3);
+}
+
+#writer h4 {
+  color: var(--heading-h4);
+}
+
+#writer h5 {
+  color: var(--heading-h5);
+}
+
+#writer h6 {
+  color: var(--heading-h6);
 }
 
 #writer ::selection {

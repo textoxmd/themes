@@ -1,4 +1,5 @@
 :root {
+  --radius: 0.65rem;
   --background: oklch(0.970 0.011 71.9);
   --foreground: oklch(0.460 0.063 289.6);
   --card: oklch(0.939 0.015 64.3);
@@ -14,7 +15,7 @@
   --accent: oklch(0.460 0.063 289.6 / 0.05);
   --accent-foreground: oklch(0.460 0.063 289.6 / 0.9);
   --destructive: oklch(0.599 0.107 2.7);
-  --warning: oklch(0.620 0.170 35.7);
+  --warning: oklch(0.620 0.170 95.7);
   --border: oklch(0.882 0.017 64.6);
   --input: oklch(0.951 0.014 64.3);
   --ring: oklch(0.617 0.074 305.7);
@@ -33,10 +34,16 @@
   --sidebar-ring: oklch(0.617 0.074 305.7);
   --breathe-color: oklch(0.617 0.074 305.7);
   --color-scheme: light;
-  --radius: 0.65rem;
+  --heading-h1: oklch(0.617 0.074 305.7);
+  --heading-h2: oklch(0.696 0.106 23.0);
+  --heading-h3: oklch(0.755 0.146 69.7);
+  --heading-h4: oklch(0.491 0.077 228.0);
+  --heading-h5: oklch(0.629 0.066 210.1);
+  --heading-h6: oklch(0.599 0.107 2.7);
 }
 
 .dark {
+  --radius: 0.65rem;
   --background: oklch(0.213 0.025 291.1);
   --foreground: oklch(0.909 0.030 290.0);
   --card: oklch(0.241 0.032 289.1);
@@ -52,7 +59,7 @@
   --accent: oklch(0.909 0.030 290.0 / 0.03);
   --accent-foreground: oklch(0.909 0.030 290.0 / 0.8);
   --destructive: oklch(0.698 0.156 4.2);
-  --warning: oklch(0.620 0.170 35.0);
+  --warning: oklch(0.620 0.170 95.0);
   --border: oklch(0.241 0.032 289.1);
   --input: oklch(0.187 0.026 290.7);
   --ring: oklch(0.776 0.095 305.0);
@@ -71,12 +78,23 @@
   --sidebar-ring: oklch(0.776 0.095 305.0);
   --breathe-color: oklch(0.776 0.095 305.0);
   --color-scheme: dark;
-  --radius: 0.65rem;
+  --heading-h1: oklch(0.776 0.095 305.0);
+  --heading-h2: oklch(0.836 0.054 21.1);
+  --heading-h3: oklch(0.843 0.110 74.6);
+  --heading-h4: oklch(0.822 0.054 209.6);
+  --heading-h5: oklch(0.528 0.079 227.7);
+  --heading-h6: oklch(0.698 0.156 4.2);
 }
 
 #writer {
   --highlight-color: oklch(0.85 0.15 85 / 0.35);
   --default-selection: oklch(0.6 0.25 255 / 0.3);
+  --heading-h1: oklch(0.617 0.074 305.7);
+  --heading-h2: oklch(0.696 0.106 23.0);
+  --heading-h3: oklch(0.755 0.146 69.7);
+  --heading-h4: oklch(0.491 0.077 228.0);
+  --heading-h5: oklch(0.629 0.066 210.1);
+  --heading-h6: oklch(0.599 0.107 2.7);
   --code-editor-theme-light: githubLight;
   --code-editor-theme-dark: githubDark;
   --source-code-theme-light: githubLight;
@@ -85,6 +103,36 @@
 
 .dark #writer {
   --default-selection: oklch(0.65 0.18 260 / 0.45);
+  --heading-h1: oklch(0.776 0.095 305.0);
+  --heading-h2: oklch(0.836 0.054 21.1);
+  --heading-h3: oklch(0.843 0.110 74.6);
+  --heading-h4: oklch(0.822 0.054 209.6);
+  --heading-h5: oklch(0.528 0.079 227.7);
+  --heading-h6: oklch(0.698 0.156 4.2);
+}
+
+#writer h1 {
+  color: var(--heading-h1);
+}
+
+#writer h2 {
+  color: var(--heading-h2);
+}
+
+#writer h3 {
+  color: var(--heading-h3);
+}
+
+#writer h4 {
+  color: var(--heading-h4);
+}
+
+#writer h5 {
+  color: var(--heading-h5);
+}
+
+#writer h6 {
+  color: var(--heading-h6);
 }
 
 #writer ::selection {
