@@ -72,6 +72,15 @@
   --sidebar-ring: oklch(0.742 0.149 301.9);
   --breathe-color: oklch(0.742 0.149 301.9);
   --color-scheme: dark;
+  --heading-color: oklch(0.977 0.008 106.5);
+  --link-color: oklch(0.883 0.093 212.8);
+  --blockquote-text-color: oklch(0.977 0.008 106.5 / 0.6);
+  --blockquote-border-color: oklch(0.560 0.080 270.1);
+  --hr-color: oklch(0.403 0.032 277.8);
+  --list-marker-color: oklch(0.742 0.149 301.9);
+  --strong-color: oklch(0.977 0.008 106.5);
+  --em-color: oklch(0.955 0.134 112.8);
+  --selection-color: oklch(0.403 0.032 277.8 / 0.8);
   --heading-h1: oklch(0.755 0.183 346.8);
   --heading-h2: oklch(0.742 0.149 301.9);
   --heading-h3: oklch(0.883 0.093 212.8);
@@ -83,6 +92,15 @@
 #writer {
   --highlight-color: oklch(0.85 0.15 85 / 0.35);
   --default-selection: oklch(0.6 0.25 255 / 0.3);
+  --heading-color: oklch(0.977 0.008 106.5);
+  --link-color: oklch(0.883 0.093 212.8);
+  --blockquote-text-color: oklch(0.977 0.008 106.5 / 0.6);
+  --blockquote-border-color: oklch(0.560 0.080 270.1);
+  --hr-color: oklch(0.403 0.032 277.8);
+  --list-marker-color: oklch(0.742 0.149 301.9);
+  --strong-color: oklch(0.977 0.008 106.5);
+  --em-color: oklch(0.955 0.134 112.8);
+  --selection-color: oklch(0.403 0.032 277.8 / 0.8);
   --heading-h1: oklch(0.755 0.183 346.8);
   --heading-h2: oklch(0.742 0.149 301.9);
   --heading-h3: oklch(0.883 0.093 212.8);
@@ -99,30 +117,19 @@
   --default-selection: oklch(0.65 0.18 260 / 0.45);
 }
 
-#writer h1 {
-  color: var(--heading-h1);
+#writer h1 { color: var(--heading-h1); }
+#writer h2 { color: var(--heading-h2); }
+#writer h3 { color: var(--heading-h3); }
+#writer h4 { color: var(--heading-h4); }
+#writer h5 { color: var(--heading-h5); }
+#writer h6 { color: var(--heading-h6); }
+#writer a { color: var(--link-color); }
+#writer blockquote {
+  color: var(--blockquote-text-color);
+  border-left: 4px solid var(--blockquote-border-color);
 }
-
-#writer h2 {
-  color: var(--heading-h2);
-}
-
-#writer h3 {
-  color: var(--heading-h3);
-}
-
-#writer h4 {
-  color: var(--heading-h4);
-}
-
-#writer h5 {
-  color: var(--heading-h5);
-}
-
-#writer h6 {
-  color: var(--heading-h6);
-}
-
-#writer ::selection {
-  background: var(--default-selection);
-}
+#writer hr { border-color: var(--hr-color); }
+#writer ul li::marker, #writer ol li::marker { color: var(--list-marker-color); }
+#writer strong { color: var(--strong-color); }
+#writer em { color: var(--em-color); }
+#writer ::selection { background: var(--default-selection); }

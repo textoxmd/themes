@@ -72,6 +72,15 @@
   --sidebar-ring: oklch(0.707 0.154 257.1);
   --breathe-color: oklch(0.707 0.154 257.1);
   --color-scheme: dark;
+  --heading-color: oklch(1.000 0.000 0.0);
+  --link-color: oklch(0.707 0.154 257.1);
+  --blockquote-text-color: oklch(1.000 0.000 0.0 / 0.6);
+  --blockquote-border-color: oklch(0.371 0.015 264.4);
+  --hr-color: oklch(0.299 0.009 248.1);
+  --list-marker-color: oklch(0.885 0.233 144.7);
+  --strong-color: oklch(1.000 0.000 0.0);
+  --em-color: oklch(0.667 0.234 308.5);
+  --selection-color: oklch(0.308 0.010 260.7 / 0.8);
   --heading-h1: oklch(0.713 0.180 28.7);
   --heading-h2: oklch(0.707 0.154 257.1);
   --heading-h3: oklch(0.885 0.233 144.7);
@@ -83,6 +92,15 @@
 #writer {
   --highlight-color: oklch(0.85 0.15 85 / 0.35);
   --default-selection: oklch(0.6 0.25 255 / 0.3);
+  --heading-color: oklch(1.000 0.000 0.0);
+  --link-color: oklch(0.707 0.154 257.1);
+  --blockquote-text-color: oklch(1.000 0.000 0.0 / 0.6);
+  --blockquote-border-color: oklch(0.371 0.015 264.4);
+  --hr-color: oklch(0.299 0.009 248.1);
+  --list-marker-color: oklch(0.885 0.233 144.7);
+  --strong-color: oklch(1.000 0.000 0.0);
+  --em-color: oklch(0.667 0.234 308.5);
+  --selection-color: oklch(0.308 0.010 260.7 / 0.8);
   --heading-h1: oklch(0.713 0.180 28.7);
   --heading-h2: oklch(0.707 0.154 257.1);
   --heading-h3: oklch(0.885 0.233 144.7);
@@ -99,30 +117,19 @@
   --default-selection: oklch(0.65 0.18 260 / 0.45);
 }
 
-#writer h1 {
-  color: var(--heading-h1);
+#writer h1 { color: var(--heading-h1); }
+#writer h2 { color: var(--heading-h2); }
+#writer h3 { color: var(--heading-h3); }
+#writer h4 { color: var(--heading-h4); }
+#writer h5 { color: var(--heading-h5); }
+#writer h6 { color: var(--heading-h6); }
+#writer a { color: var(--link-color); }
+#writer blockquote {
+  color: var(--blockquote-text-color);
+  border-left: 4px solid var(--blockquote-border-color);
 }
-
-#writer h2 {
-  color: var(--heading-h2);
-}
-
-#writer h3 {
-  color: var(--heading-h3);
-}
-
-#writer h4 {
-  color: var(--heading-h4);
-}
-
-#writer h5 {
-  color: var(--heading-h5);
-}
-
-#writer h6 {
-  color: var(--heading-h6);
-}
-
-#writer ::selection {
-  background: var(--default-selection);
-}
+#writer hr { border-color: var(--hr-color); }
+#writer ul li::marker, #writer ol li::marker { color: var(--list-marker-color); }
+#writer strong { color: var(--strong-color); }
+#writer em { color: var(--em-color); }
+#writer ::selection { background: var(--default-selection); }

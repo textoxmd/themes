@@ -34,6 +34,15 @@
   --sidebar-ring: oklch(0.617 0.074 305.7);
   --breathe-color: oklch(0.617 0.074 305.7);
   --color-scheme: light;
+  --heading-color: oklch(0.460 0.063 289.6);
+  --link-color: oklch(0.491 0.077 228.0);
+  --blockquote-text-color: oklch(0.460 0.063 289.6 / 0.6);
+  --blockquote-border-color: oklch(0.673 0.027 298.4);
+  --hr-color: oklch(0.882 0.017 64.6);
+  --list-marker-color: oklch(0.617 0.074 305.7);
+  --strong-color: oklch(0.460 0.063 289.6);
+  --em-color: oklch(0.696 0.106 23.0);
+  --selection-color: oklch(0.938 0.018 73.1 / 0.8);
   --heading-h1: oklch(0.617 0.074 305.7);
   --heading-h2: oklch(0.696 0.106 23.0);
   --heading-h3: oklch(0.755 0.146 69.7);
@@ -78,6 +87,15 @@
   --sidebar-ring: oklch(0.776 0.095 305.0);
   --breathe-color: oklch(0.776 0.095 305.0);
   --color-scheme: dark;
+  --heading-color: oklch(0.909 0.030 290.0);
+  --link-color: oklch(0.822 0.054 209.6);
+  --blockquote-text-color: oklch(0.909 0.030 290.0 / 0.6);
+  --blockquote-border-color: oklch(0.372 0.036 291.1);
+  --hr-color: oklch(0.271 0.042 289.2);
+  --list-marker-color: oklch(0.776 0.095 305.0);
+  --strong-color: oklch(0.909 0.030 290.0);
+  --em-color: oklch(0.836 0.054 21.1);
+  --selection-color: oklch(0.268 0.033 291.6 / 0.8);
   --heading-h1: oklch(0.776 0.095 305.0);
   --heading-h2: oklch(0.836 0.054 21.1);
   --heading-h3: oklch(0.843 0.110 74.6);
@@ -89,6 +107,15 @@
 #writer {
   --highlight-color: oklch(0.85 0.15 85 / 0.35);
   --default-selection: oklch(0.6 0.25 255 / 0.3);
+  --heading-color: oklch(0.460 0.063 289.6);
+  --link-color: oklch(0.491 0.077 228.0);
+  --blockquote-text-color: oklch(0.460 0.063 289.6 / 0.6);
+  --blockquote-border-color: oklch(0.673 0.027 298.4);
+  --hr-color: oklch(0.882 0.017 64.6);
+  --list-marker-color: oklch(0.617 0.074 305.7);
+  --strong-color: oklch(0.460 0.063 289.6);
+  --em-color: oklch(0.696 0.106 23.0);
+  --selection-color: oklch(0.938 0.018 73.1 / 0.8);
   --heading-h1: oklch(0.617 0.074 305.7);
   --heading-h2: oklch(0.696 0.106 23.0);
   --heading-h3: oklch(0.755 0.146 69.7);
@@ -103,6 +130,15 @@
 
 .dark #writer {
   --default-selection: oklch(0.65 0.18 260 / 0.45);
+  --heading-color: oklch(0.909 0.030 290.0);
+  --link-color: oklch(0.822 0.054 209.6);
+  --blockquote-text-color: oklch(0.909 0.030 290.0 / 0.6);
+  --blockquote-border-color: oklch(0.372 0.036 291.1);
+  --hr-color: oklch(0.271 0.042 289.2);
+  --list-marker-color: oklch(0.776 0.095 305.0);
+  --strong-color: oklch(0.909 0.030 290.0);
+  --em-color: oklch(0.836 0.054 21.1);
+  --selection-color: oklch(0.268 0.033 291.6 / 0.8);
   --heading-h1: oklch(0.776 0.095 305.0);
   --heading-h2: oklch(0.836 0.054 21.1);
   --heading-h3: oklch(0.843 0.110 74.6);
@@ -111,30 +147,19 @@
   --heading-h6: oklch(0.698 0.156 4.2);
 }
 
-#writer h1 {
-  color: var(--heading-h1);
+#writer h1 { color: var(--heading-h1); }
+#writer h2 { color: var(--heading-h2); }
+#writer h3 { color: var(--heading-h3); }
+#writer h4 { color: var(--heading-h4); }
+#writer h5 { color: var(--heading-h5); }
+#writer h6 { color: var(--heading-h6); }
+#writer a { color: var(--link-color); }
+#writer blockquote {
+  color: var(--blockquote-text-color);
+  border-left: 4px solid var(--blockquote-border-color);
 }
-
-#writer h2 {
-  color: var(--heading-h2);
-}
-
-#writer h3 {
-  color: var(--heading-h3);
-}
-
-#writer h4 {
-  color: var(--heading-h4);
-}
-
-#writer h5 {
-  color: var(--heading-h5);
-}
-
-#writer h6 {
-  color: var(--heading-h6);
-}
-
-#writer ::selection {
-  background: var(--default-selection);
-}
+#writer hr { border-color: var(--hr-color); }
+#writer ul li::marker, #writer ol li::marker { color: var(--list-marker-color); }
+#writer strong { color: var(--strong-color); }
+#writer em { color: var(--em-color); }
+#writer ::selection { background: var(--default-selection); }
